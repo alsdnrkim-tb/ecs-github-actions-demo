@@ -22,7 +22,7 @@ jobs:
     - name: Login to Amazon ECR Public
       run: |
         aws ecr-public get-login-password --region us-east-1 | \
-        docker login --username AWS --password-stdin public.ecr.aws/<본인 ECR 주소로 변경>
+        docker login --username AWS --password-stdin public.ecr.aws/x5i6q6i6/ecs-demo-repo
 
     - name: Build Docker image
       run: |
