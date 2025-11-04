@@ -21,13 +21,13 @@ jobs:
 
     - name: Login to Amazon ECR Public
       run: |
-        aws ecr-public get-login-password --region us-east-1 | \     
+        aws ecr-public get-login-password --region us-east-1 | \
         docker login --username AWS --password-stdin public.ecr.aws/<본인 ECR 주소로 변경>
 
     - name: Build Docker image
       run: |
         docker build -t ecs-demo-repo:latest .
-        docker tag ecs-demo-repo:latest public.ecr.aws/<본인 ECR 주소로 변경>/ecs-demo-repo:latest
+        docker tag ecs-demo-repo:latest public.ecr.aws/x5i6q6i6/ecs-demo-repo
 
     - name: Push Docker image to ECR
       run: |
