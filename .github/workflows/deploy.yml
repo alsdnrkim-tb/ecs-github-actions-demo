@@ -31,7 +31,7 @@ jobs:
 
     - name: Push Docker image to ECR
       run: |
-        docker push public.ecr.aws/<본인 ECR 주소로 변경>/ecs-demo-repo:latest
+        docker push public.ecr.aws/x5i6q6i6/ecs-demo-repo
 
     - name: Deploy to ECS (Fargate)
       run: |
